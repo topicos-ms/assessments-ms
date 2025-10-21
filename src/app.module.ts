@@ -6,7 +6,6 @@ import { GradesModule } from './grades/grades.module';
 import { typeOrmConfig } from './config/typeorm.config';
 import { envs } from './config/envs';
 import { EventPublisherInterceptor, EVENT_EMITTER } from './common/events/event-publisher.interceptor';
-import { HealthController } from './common/health.controller';
 
 @Module({
   imports: [
@@ -29,7 +28,7 @@ import { HealthController } from './common/health.controller';
     ]),
     GradesModule,
   ],
-  controllers: [HealthController],
+  controllers: [],
   providers: [EventPublisherInterceptor],
   exports: [EventPublisherInterceptor],
 })
